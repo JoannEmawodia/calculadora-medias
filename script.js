@@ -20,7 +20,7 @@ function adicionaLinha(){
     const inputNomeAtividade = document.getElementById('nome-atividade');
     const inputNotaAtividade = document.getElementById('nota-atividade');
 
-    if (atividades.includes(inputNomeAtividades.value)) {
+    if (atividades.includes(inputNomeAtividade.value)) {
         alert(`A atividade: ${inputNomeAtividade.value} já foi inserida`);
     } else {
         atividades.push(inputNomeAtividade.value);
@@ -33,6 +33,8 @@ function adicionaLinha(){
         linha += `</tr>`;
 
         linhas += linha;
+        atualizaTabela();
+        atualizaMediaFinal();
     }
 
     inputNomeAtividade.value = '';
